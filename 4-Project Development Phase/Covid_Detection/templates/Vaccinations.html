@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Vaccinations</title>
+</head>
+<style>
+    .first{
+        display: inline-block;
+    }
+    .fixed{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        width: 100%;
+        height: 50px;
+    }
+
+</style>
+<body>
+    <div>
+        <nav class="fixed navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand text-dark ms-5" href="{{ url_for('home') }}"><b>Covi-Sift</b></a>
+                <button class="navbar-toggler bg-light" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarAltMarkup"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarAltMarkup">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active text-dark me-5" href="{{ url_for('about') }}"><b>About</b></a>
+                        <a class="nav-link active text-dark me-5" href="{{ url_for('precautions') }}"><b>Precautions</b></a>
+                        <a class="nav-link active me-5" href="{{ url_for('vaccinations') }}" style="color: darkgray;"><b>Vaccinations</b></a>
+                        <a class="nav-link active text-dark me-5" href="{{ url_for('test') }}"><b>Test</b></a>
+
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="first mt-5 ms-3">
+        <img src="{{ url_for('static', filename='images/covid1.avif') }}" alt="" style="height: 400px;">
+    </div>
+    <div class="first">
+        <img src="{{ url_for('static', filename='images/covid2.avif') }}" alt="" style="height: 300px;">
+    </div>
+    <div class="first">
+        <img src="{{ url_for('static', filename='images/covid3.jpg') }}" alt="" style="height: 400px;">
+    </div>
+
+    <div class="first mt-5 ">
+        <img src="{{ url_for('static', filename='images/covid4.jpg') }}" alt="" style="height: 400px;">
+    </div>
+    <div class="first">
+        <img src="{{ url_for('static', filename='images/covid5.png') }}" alt="" style="height: 300px;">
+    </div>
+    <div class="first">
+        <img src="{{ url_for('static', filename='images/covid6.png') }}" alt="" style="height: 340px;">
+    </div>
+
+    <div class="first mt-5 ms-4">
+        <img src="{{ url_for('static', filename='images/covid7.jpeg') }}" alt="" style="height: 350px;">
+    </div>
+    <div class="first ms-4">
+        <img src="{{ url_for('static', filename='images/covid8.jpeg') }}" alt="" style="height: 350px;">
+    </div>
+    <div class="first ms-4">
+        <img src="{{ url_for('static', filename='images/covid9.jpeg') }}" alt="" style="height: 350px;">
+    </div>
+
+</body>
+</html>
